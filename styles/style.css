@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  font-family: "Raleway", sans-serif;
+  background-image: url("../assets/background.png"); /* Caminho da imagem */
+  background-size: cover; /* Cobre toda a área, mantendo proporção */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  background-attachment: fixed; /* Opcional: fixa a imagem ao rolar (ajuste conforme necessário) */
+}
+
+.content {
+  width: 80%;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.subcontent_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subcontent_text h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  text-align: center;
+  color: rgb(0, 104, 31);
+
+}
+
+.subcontent_text p {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 20px 0px;
+  text-align: center;
+  color: rgb(0, 27, 8);
+
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+img {
+  width: 80%;
+  height: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  body { 
+    height: 100%;
+  }
+
+  .subcontent_text {
+    order: 1; /* Coloca o texto em primeiro (cima) */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
