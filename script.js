@@ -1,19 +1,21 @@
 const texts = {
-  title: "Take Care of Your Nails the Natural Way",
-  subtitle: "Have you ever wondered how to keep your nails healthy, strong and free from problems such as fungus or brittleness, without resorting to aggressive chemical products?",
+  title: "Revive Your Nails and Radiant Skin Naturally – Try It Today!",
+  subtitle:
+    "Want beautiful, strong nails and healthy skin without harsh chemicals? Discover a natural, at-home treatment using cutting-edge nanotechnology to fight common issues and boost resilience. It’s simple, affordable, and works from the comfort of your home. Click below to explore this easy solution now! Results may vary – consult a professional before use. This is an affiliate review.",
 };
 
 document.getElementById("text_title").textContent = texts.title;
 document.getElementById("text_subtitle").textContent = texts.subtitle;
 
-const encryptedLink = "https://6df2f5bz42ip8j19hqcr011m8v.hop.clickbank.net?cbpage=tsl";
+const encryptedLink =
+  "https://e26525m1t4dh5f-ages-m4-m1e.hop.clickbank.net?cbpage=tsl";
 
-document.querySelectorAll("[data-product]").forEach(link => {
+document.querySelectorAll("[data-product]").forEach((link) => {
   link.href = encryptedLink;
 });
 
 // Configure o redirecionamento pelo clique na imagem e no texto diretamente
-document.querySelectorAll("[data-product]").forEach(link => {
+document.querySelectorAll("[data-product]").forEach((link) => {
   link.addEventListener("click", () => {
     window.open(encryptedLink, "_self");
   });
@@ -23,7 +25,9 @@ function redirectToHoplink() {
   window.open(encryptedLink, "_self");
 }
 
-document.getElementById("button_see_more").addEventListener("click", redirectToHoplink);
+document
+  .getElementById("button_see_more")
+  .addEventListener("click", redirectToHoplink);
 
 let hasScrolled = false;
 document.addEventListener("scroll", () => {
