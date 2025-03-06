@@ -7,23 +7,20 @@
 body {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   font-family: "Poppins", sans-serif;
-  background-image: url("../assets/background.png"); /* Caminho da imagem */
-  background-size: cover; /* Cobre toda a área, mantendo proporção */
-  background-position: center; /* Centraliza a imagem */
-  background-repeat: no-repeat; /* Evita repetição da imagem */
-  background-attachment: fixed; /* Opcional: fixa a imagem ao rolar (ajuste conforme necessário) */
+  padding: 0 100px;
 }
 
 .content {
-  width: 80%;
+  width: 100%;
   padding: 4rem;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 50% 50%;
   align-items: center;
   justify-content: center;
 }
@@ -38,19 +35,45 @@ a {
   align-items: center;
 }
 
-.subcontent_text h1 {
+body h1 {
   font-size: 3rem;
   font-weight: 800;
   text-align: center;
   color: rgb(12, 70, 145);
+  margin-top: 20px;
+}
+
+.subcontent_text .subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 20px 0px;
+  text-align: justify;
+  color: rgb(170 0 0);
 }
 
 .subcontent_text p {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 400;
   margin: 20px 0px;
-  text-align: center;
-  color: rgb(0, 21, 66);
+  text-align: justify;
+  color: rgb(17 17 17);
+}
+
+.try,
+.try_first {
+  width: 100%;
+  height: 60px;
+  color: white;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border: none;
+  background-color: green;
+}
+
+.try:hover,
+.try_first:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 a:hover {
@@ -58,22 +81,40 @@ a:hover {
 }
 
 img {
-  width: 80%;
-  height: 100%;
+  width: 100%;
 }
 
 h1 {
   font-size: 2rem;
 }
 
+.reference {
+  margin-top: 5px;
+  font-size: 8px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .try_first {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   body {
     height: 100%;
+    padding: 10px 50px;
   }
 
   .content {
     width: 100%;
     padding: 2rem;
+
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 100%;
+    align-items: center;
+    justify-content: center;
   }
 
   .subcontent_text {
@@ -83,8 +124,8 @@ h1 {
     text-align: center;
   }
 
-  .subcontent_text h1 {
-    font-size: 2rem;
+  body h1 {
+    font-size: 1.7rem;
   }
 
   .subcontent_text p {
